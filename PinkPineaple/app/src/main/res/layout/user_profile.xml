@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginBottom="4dp"
+    android:background="#FFFf"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        tools:src="@drawable/headshot_7"
+        android:layout_margin="10dp"/>
+    <TextView
+        android:id="@+id/text_view_display_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Marcelino"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        android:layout_alignBottom="@+id/img_avatar"
+        android:layout_toEndOf="@+id/img_avatar"
+        android:layout_marginBottom="26dp"
+        android:layout_toRightOf="@+id/img_avatar" />
+
+    <TextView
+        android:id="@+id/text_view_connection_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Online"
+        android:layout_alignTop="@+id/img_avatar"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_alignParentRight="true" />
+    />
+</RelativeLayout>

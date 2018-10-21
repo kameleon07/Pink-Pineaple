@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1081428427610",
+    "firebase_url": "https://pink-pineaple-e7c23.firebaseio.com",
+    "project_id": "pink-pineaple-e7c23",
+    "storage_bucket": "pink-pineaple-e7c23.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1081428427610:android:b04b3ee8a446489c",
+        "android_client_info": {
+          "package_name": "com.pink.pinkpineaple"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1081428427610-7g6n5viepu8muqoq3vqqgi2ka44ujqgs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pink.pinkpineaple",
+            "certificate_hash": "735ba1fac7822cd7ca68d64bcdddfc0f2f145350"
+          }
+        },
+        {
+          "client_id": "1081428427610-h4nic77ssbnu6tv3gnqnslr6al1kom7a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_XU6JTWC665vjzV9iNdfv8giIVodDwhc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1081428427610-h4nic77ssbnu6tv3gnqnslr6al1kom7a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
