@@ -6,6 +6,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     Button login,register;
     String Email,Password;
     ProgressDialog mDialog;
+    FirebaseUser mUser;
+    FirebaseAuth.AuthStateListener mAuthListner;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +46,37 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         login.setOnClickListener(this);
         register.setOnClickListener(this);
         mDialog = new ProgressDialog(this);
+        mUser = FirebaseAuth.getInstance().getCurrentUser();
+
+
+        mAuthListner = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                if (mUser!=null){
+                    Intent intent = new Intent(Login.this,DashBoard.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                }else {
+                    Log.d(TAG,"AuthStateChange:LogOut");
+                }
+            }
+        };
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListner);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (mAuthListner!=null){
+            mAuth.removeAuthStateListener(mAuthListner);
+        }
+    }
+
     private void setAuthInstance() {
         mAuth = FirebaseAuth.getInstance();
     }
@@ -109,9 +144,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         }
     }
     private void goToMainActivity() {
-        Intent intent = new Intent(Login.this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        Intent intent = new Intent(Login.this, DashBoard.class);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
     private void goToRegisterActivity() {

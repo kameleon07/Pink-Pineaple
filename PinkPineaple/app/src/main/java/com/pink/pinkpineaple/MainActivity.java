@@ -42,20 +42,27 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView mUsersRecyclerView;
     ProgressBar mProgressBarForUsers;
     Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         toolbar = (Toolbar)findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
         mUsersRecyclerView = (RecyclerView)findViewById(R.id.recycler_view_users);
         mProgressBarForUsers = (ProgressBar)findViewById(R.id.progress_bar_users);
+
+
+
         setAuthInstance();
         setUsersDatabase();
         setUserRecyclerView();
         setUsersKeyList();
         setAuthListener();
     }
+
     private void setAuthInstance() {
         mAuth = FirebaseAuth.getInstance();
     }

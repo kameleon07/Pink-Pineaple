@@ -2,9 +2,6 @@ package com.pink.pinkpineaple;
 
 import com.google.firebase.database.Exclude;
 
-/**
- * Created by unmwjsi001 on 23-06-2017.
- */
 
 public class ChatMessage {
     private String message;

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1a1c1e"
+    tools:context=".DashBoard">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bioCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <ScrollView
+            android:id="@+id/bioScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/bioLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bioName"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="70dp"
+                    android:text="TextView"
+                    android:textSize="40sp" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="?android:attr/listDivider" />
+
+                <TextView
+                    android:id="@+id/bioText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="800dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="20dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="70dp"
+        android:layout_height="57dp"
+        android:layout_gravity="top|center"
+        android:elevation="21dp"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/settingsBtn"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:background="@android:color/transparent"
+        android:elevation="21dp"
+        app:srcCompat="?android:attr/listChoiceIndicatorSingle" />
+
+    <ImageButton
+        android:id="@+id/messageBtn"
+        android:layout_width="65dp"
+        android:layout_height="55dp"
+        android:layout_gravity="right"
+        android:background="@android:color/transparent"
+        android:elevation="21dp"
+        app:srcCompat="?android:attr/fingerprintAuthDrawable" />
+
+    <ImageButton
+        android:id="@+id/likeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/dislikeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:rotation="180"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <com.lorentzos.flingswipe.SwipeFlingAdapterView
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="572dp"
+        android:background="@android:color/transparent"
+        app:rotation_degrees="15.5">
+
+    </com.lorentzos.flingswipe.SwipeFlingAdapterView>
+
+
+</FrameLayout>
