@@ -50,7 +50,7 @@ public class DashBoard extends AppCompatActivity {
         Profile pf3 = new Profile("Aria");
 
         pf1.setBio("HELLO I LIKE RACE CARS");    //manually setting their bio.
-        pf2.setBio("HI IM MARY I LICK DINOSAURS");
+        pf2.setBio("HI IM MARY I LIKE DINOSAURS");
         pf3.setBio("I like people called Aamir");
 
         pf1.setImageId(R.drawable.placeholder);  //manually setting their profile pics.
@@ -90,12 +90,12 @@ public class DashBoard extends AppCompatActivity {
                 /*
                 * if match then create a new instance of match else
                 * */
-                Toast.makeText(DashBoard.this, "ugly", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DashBoard.this, "dislike", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightCardExit(Object dataObject) {
-                Toast.makeText(DashBoard.this, "onion", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DashBoard.this, "like", Toast.LENGTH_SHORT).show();
             }
 
             @Override
